@@ -1,0 +1,16 @@
+module program_counter (
+    input logic clk, rst
+    input logic [31:0]pc_next,
+    output logic [31:0]pc
+);
+    
+    always_ff @(posedge clk) begin
+        if(rst) begin
+            pc <= 32'h00000000;
+        end
+        else begin
+            pc <= pc_next;
+        end
+    end
+
+endmodule
