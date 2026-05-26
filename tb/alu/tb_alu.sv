@@ -1,4 +1,4 @@
-module tb_alu ;
+module tb_alu;
     
     //0. Counters
     int pass_count = 0;
