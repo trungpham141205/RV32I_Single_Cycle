@@ -68,29 +68,31 @@ module tb_register_file;
 
     endtask
 
-    //6. Initial Block
-    initial begin
-        // Test 1: ghi x1, đọc lại
-        write_reg(5'd1, 32'hDEADBEEF);
-        read_and_check(5'd1, 32'hDEADBEEF, 5'd0, 32'h00000000);
-
-        // Test 2: ghi x0 → vẫn = 0
-        write_reg(5'd0, 32'hFFFFFFFF);
-        read_and_check(5'd0, 32'h00000000, 5'd0, 32'h00000000);
-
-        // Test 3: reg_write=0 → không ghi
-        reg_write = 1'b0;
-        rd = 5'd12;
-        write_data = 32'hFFFFFFFF;
+    //6. Task: Reset
+    task do_reset();
+        rst = 1'b1;
         @(posedge clk);
         #1;
-        read_and_check(5'd12, 32'h00000000, 5'd14, 32'h00000000);
+        rst = 1'b0;
+    endtask
 
-        // Test 4: đọc 2 register khác nhau
-        write_reg(5'd13, 32'hD3A4BE7F);
-        write_reg(5'd15, 32'hAFFB987F);
-        read_and_check(5'd13, 32'hD3A4BE7F, 5'd15, 32'hAFFB987F);
-        
+    //7. Initial Block
+    initial begin
+        pc_next = 32'h0;
+        do_reset();  // thay cho 3 dòng rst=1, @posedge, #1
+
+        // Test 1
+        check(32'h00000000);
+
+        // Test 2
+        next_pc(32'h00000004);
+        check(32'h00000004);
+
+        // Test 3
+        next_pc(32'h00001000);
+        do_reset();  // thay cho rst=1, @posedge, #1
+        check(32'h00000000);
+
         $display("Result: %0d PASSED, %0d FAILED", pass_count, fail_count);
         $finish;
     end
