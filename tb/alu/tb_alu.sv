@@ -21,7 +21,10 @@ module tb_alu ;
     );
 
     //3. Helper Functions
-    function automatic logic [31:0]calc_alu_result(input logic [3:0]alu_control, input logic [31:0]a, input logic[31:0]b);
+    function automatic logic [31:0]calc_alu_result(
+        input logic [3:0]alu_control, 
+        input logic [31:0]a, input logic[31:0]b
+    );
         case (alu_control)
             4'b0000: return a + b;
             4'b0001: return a - b;

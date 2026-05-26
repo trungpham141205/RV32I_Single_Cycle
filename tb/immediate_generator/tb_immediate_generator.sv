@@ -17,7 +17,10 @@ module tb_immediate_generator;
     );
 
     //3.Helper Functions
-    function automatic logic [31:0]calc_imm(input logic [2:0]imm_sel, input logic [31:0]instr);
+    function automatic logic [31:0]calc_imm(
+        input logic [2:0]imm_sel, 
+        input logic [31:0]instr
+    );
         case (imm_sel)
             //U-Type
             3'b000:  return {instr[31:12], 12'b0};
@@ -32,7 +35,7 @@ module tb_immediate_generator;
             3'b011:  return {{20{instr[31]}}, instr[31:20]};
 
             //S-Type
-            3'b100:  return {{20{instr[31]}}, instr[31:25], instr[11:7]};
+            3'b100:  return {{20{instr[31]}}    , instr[31:25], instr[11:7]};
 
             //I-Type (Shift Amount)
             3'b101:  return {27'b0, instr[24:20]};
