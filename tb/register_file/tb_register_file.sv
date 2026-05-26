@@ -45,7 +45,7 @@ module tb_register_file;
         
     endtask 
 
-    //5. Task Read and Check
+    //5. Task: Read and Check
     task read_and_check(
         input logic [4:0]i_rs1,
         input logic [31:0]i_expected_rs1,
@@ -68,6 +68,7 @@ module tb_register_file;
 
     endtask
 
+    //6. Initial Block
     initial begin
         // Test 1: ghi x1, đọc lại
         write_reg(5'd1, 32'hDEADBEEF);
