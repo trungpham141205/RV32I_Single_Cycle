@@ -54,12 +54,12 @@ module control_unit (
             7'b0010011: begin
                 {reg_write, reg_back, src_a_sel, src_b_sel, mem_read, mem_write, pc_sel} = 9'b1_00_0_1_0_0_11;
                 casez ({funct3, funct7})
-                    4'b000?: {imm_sel, alu_control} = 7'b011_0000;
-                    4'b010?: {imm_sel, alu_control} = 7'b011_0100;
-                    4'b011?: {imm_sel, alu_control} = 7'b011_0101;
-                    4'b100?: {imm_sel, alu_control} = 7'b011_0110;
-                    4'b110?: {imm_sel, alu_control} = 7'b011_1001;
-                    4'b111?: {imm_sel, alu_control} = 7'b011_1010;
+                        4'b000?: {imm_sel, alu_control} = 7'b011_0000;
+                        4'b010?: {imm_sel, alu_control} = 7'b011_0011;
+                        4'b011?: {imm_sel, alu_control} = 7'b011_0100;
+                        4'b100?: {imm_sel, alu_control} = 7'b011_0101;
+                        4'b110?: {imm_sel, alu_control} = 7'b011_1000;
+                        4'b111?: {imm_sel, alu_control} = 7'b011_1001;
 
                     //SLLI
                     4'b0010: {imm_sel, alu_control} = 7'b101_0010;

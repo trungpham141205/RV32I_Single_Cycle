@@ -9,9 +9,7 @@ package tb_utils_pkg;
         logic [3:0] alu_control;
         logic mem_read;
         logic mem_write;
-        logic branch;
-        logic jump;
-        logic jump_reg;
+        logic [1:0]pc_sel;
     } control_t;
 
     function automatic control_t calc_control(
@@ -27,6 +25,7 @@ package tb_utils_pkg;
             7'b0110111: begin
                 control.reg_write = 1'b1;
                 control.reg_back = 2'b11;
+                control.pc_sel = 2'b11;
             end 
 
             //AUIPC
@@ -34,6 +33,7 @@ package tb_utils_pkg;
                 control.reg_write = 1'b1;
                 control.src_a_sel = 1'b1;
                 control.src_b_sel = 1'b1;
+                control.pc_sel = 2'b11;
             end 
 
             //JAL
@@ -41,14 +41,14 @@ package tb_utils_pkg;
                 control.reg_write = 1'b1;
                 control.reg_back = 2'b10;
                 control.imm_sel = 3'b001;
-                control.jump = 1'b1;
+                control.pc_sel = 2'b01;
             end
 
             //B-TYPE
             7'b1100011: begin
 
                 control.imm_sel = 3'b010;
-                control.branch = 1'b1;
+                control.pc_sel = 2'b00;
 
                 case (funct3)
                     //BEQ, BNE
@@ -73,7 +73,7 @@ package tb_utils_pkg;
                 control.reg_back = 2'b10;
                 control.imm_sel = 3'b011;
                 control.src_b_sel = 1'b1;
-                control.jump_reg = 1'b1;
+                control.pc_sel = 2'b10;
             end 
             
             //LOAD
@@ -83,12 +83,14 @@ package tb_utils_pkg;
                 control.imm_sel = 3'b011;
                 control.src_b_sel = 1'b1;
                 control.mem_read = 1'b1;
+                control.pc_sel = 2'b11;
             end
 
             //I-TYPE
             7'b0010011: begin
                 control.reg_write = 1'b1;
                 control.src_b_sel = 1'b1;
+                control.pc_sel = 2'b11;
                 casez ({funct3, funct7})
                     4'b000?: begin
                         control.imm_sel = 3'b011;
@@ -145,11 +147,13 @@ package tb_utils_pkg;
                 control.imm_sel = 3'b100;
                 control.src_b_sel = 1'b1;
                 control.mem_write = 1'b1;
+                control.pc_sel = 2'b11;
             end
 
             //R-TYPE
             7'b0110011: begin
                 control.reg_write = 1'b1;
+                control.pc_sel = 2'b11;
                 case ({funct3, funct7})
                     4'b0000: control.alu_control = 4'b0000;
                     4'b0001: control.alu_control = 4'b0001;

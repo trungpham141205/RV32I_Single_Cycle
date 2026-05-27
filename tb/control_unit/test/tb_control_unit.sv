@@ -18,9 +18,7 @@ module tb_control_unit;
     logic [3:0]alu_control;
     logic mem_read;
     logic mem_write;
-    logic branch;
-    logic jump;
-    logic jump_reg;
+    logic [1:0]pc_sel;
 
     //2. DUT Instantiation
     control_unit dut(
@@ -35,9 +33,7 @@ module tb_control_unit;
         .alu_control(alu_control),
         .mem_read(mem_read),
         .mem_write(mem_write),
-        .branch(branch),
-        .jump(jump),
-        .jump_reg(jump_reg)
+        .pc_sel(pc_sel)
     );
 
     //3. Task: Apply and Check
@@ -54,13 +50,13 @@ module tb_control_unit;
         i_expected = calc_control(i_funct7, i_funct3, i_opcode);
         #10;
 
-        if({reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, branch, jump, jump_reg} == i_expected) begin
+        if({reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, pc_sel} == i_expected) begin
             pass_count++;
-            $display("PASS | funct7 = %h | funct3 = %h | opcode = %h | result = %h", funct7, funct3, opcode, {reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, branch, jump, jump_reg});
+            $display("PASS | funct7 = %h | funct3 = %h | opcode = %h | result = %h", funct7, funct3, opcode, {reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, pc_sel});
         end
         else begin
             fail_count++;
-            $display("FAIl | funct7 = %h | funct3 = %h | opcode = %h | expected = %h | got = %h", funct7, funct3, opcode, i_expected, {reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, branch, jump, jump_reg});
+            $display("FAIl | funct7 = %h | funct3 = %h | opcode = %h | expected = %h | got = %h", funct7, funct3, opcode, i_expected, {reg_write, reg_back, imm_sel, src_a_sel, src_b_sel, alu_control, mem_read, mem_write, pc_sel});
         end
 
     endtask 
