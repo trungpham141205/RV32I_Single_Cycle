@@ -121,6 +121,52 @@ module tb_branch_unit;
             $display("FAIL | pc_sel = %b | zero = %b | funct3 = %b | expected = %h | got = %h", i_pc_sel, i_zero, i_funct3, i_expected, pc_next)
         end
 
-    endtask //
+    endtask 
+
+    //6. Initial Block
+        initial begin
+
+        // ── Branch mode (pc_sel=00) ──
+        // BEQ (funct3=000): taken khi zero=1
+        apply_and_check(2'b00, 1'b1, 3'b000, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b0, 3'b000, 32'h00000008, 32'h00000100);
+
+        // BNE (funct3=001): taken khi zero=0
+        apply_and_check(2'b00, 1'b0, 3'b001, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b1, 3'b001, 32'h00000008, 32'h00000100);
+
+        // BLT (funct3=100): taken khi zero=0
+        apply_and_check(2'b00, 1'b0, 3'b100, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b1, 3'b100, 32'h00000008, 32'h00000100);
+
+        // BGE (funct3=101): taken khi zero=1
+        apply_and_check(2'b00, 1'b1, 3'b101, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b0, 3'b101, 32'h00000008, 32'h00000100);
+
+        // BLTU (funct3=110): taken khi zero=0
+        apply_and_check(2'b00, 1'b0, 3'b110, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b1, 3'b110, 32'h00000008, 32'h00000100);
+
+        // BGEU (funct3=111): taken khi zero=1
+        apply_and_check(2'b00, 1'b1, 3'b111, 32'h00000008, 32'h00000100);
+        apply_and_check(2'b00, 1'b0, 3'b111, 32'h00000008, 32'h00000100);
+
+        // ── Jump mode ──
+        // JAL (pc_sel=01): luôn pc_target
+        apply_and_check(2'b01, 1'b0, 3'b000, 32'h00000008, 32'h00000200);
+
+        // JALR (pc_sel=10): luôn pc_target
+        apply_and_check(2'b10, 1'b0, 3'b000, 32'h00000008, 32'h00000300);
+
+        // Default (pc_sel=11): luôn pc_inc
+        apply_and_check(2'b11, 1'b0, 3'b000, 32'h00000008, 32'h00000400);
+
+        // ── Report ──
+        $display("\nResult: %0d PASSED, %0d FAILED", pass_count, fail_count);
+        $display("Branch coverage: %0.1f%%", cg_branch.get_coverage());
+        $display("Jump coverage:   %0.1f%%", cg_jump.get_coverage());
+
+        $finish;
+    end
 
 endmodule
