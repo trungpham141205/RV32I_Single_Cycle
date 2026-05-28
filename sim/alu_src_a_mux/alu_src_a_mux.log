@@ -1,0 +1,56 @@
+# set MODULE alu_src_a_mux
+# alu_src_a_mux
+#  source scripts/run_unit.tcl
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 14:02:46 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module alu_src_a_mux
+# 
+# Top level modules:
+# 	alu_src_a_mux
+# End time: 14:02:46 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 14:02:46 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/alu_src_a_mux/tb_alu_src_a_mux.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module tb_alu_src_a_mux
+# 
+# Top level modules:
+# 	tb_alu_src_a_mux
+# End time: 14:02:46 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -t 1ps -voptargs="+acc" -wlf alu_src_a_mux.wlf -work work -do "add wave -recursive *; run -all; quit -f" work.tb_alu_src_a_mux 
+# Start time: 14:02:46 on May 28,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_alu_src_a_mux(fast)
+# Loading work.alu_src_a_mux(fast)
+# add wave -recursive *
+#  run -all
+# PASS | src_a_sel = 0 | reg_data = 00000000 | pc_data = fffffffc | src_a = 00000000
+# PASS | src_a_sel = 1 | reg_data = 1a2b3c4d | pc_data = 00001004 | src_a = 00001004
+# Result: 2 PASSED, 0 FAILED
+# ** Note: $finish    : /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/alu_src_a_mux/tb_alu_src_a_mux.sv(73)
+#    Time: 20 ps  Iteration: 0  Instance: /tb_alu_src_a_mux
+# End time: 14:02:47 on May 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

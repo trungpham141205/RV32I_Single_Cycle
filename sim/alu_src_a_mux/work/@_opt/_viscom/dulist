@@ -1,0 +1,2 @@
+1 13 alu_src_a_mux 4 fast 65 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/alu_src_a_mux/work 0 0 0 0 13 0
+1 16 tb_alu_src_a_mux 4 fast 65 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/alu_src_a_mux/work 0 0 0 0 103 0

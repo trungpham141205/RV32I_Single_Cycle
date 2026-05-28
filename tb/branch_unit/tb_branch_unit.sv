@@ -33,7 +33,7 @@ module tb_branch_unit;
             bins bltu = {3'b110};
             bins bgeu = {3'b111};
             // Others funct3 is illegal -> ignore
-            ignore_bins others = default;
+            ignore_bins others = {3'b010,  3'b011};
         }
 
         cp_zero: coverpoint zero{
@@ -52,7 +52,7 @@ module tb_branch_unit;
             bins jal = {2'b01};
             bins jalr = {2'b10};
             bins default_ = {2'b11};
-        };
+        }
     endgroup
 
     cg_branch_mode cg_branch = new();
@@ -109,7 +109,7 @@ module tb_branch_unit;
         pc_target = i_pc_target;
         #10;
 
-        i_expected = calc_pc_next(i_pc_sel, i_zero, i_funct3, i_pc_inc, ic_pc_target);
+        i_expected = calc_pc_next(i_pc_sel, i_zero, i_funct3, i_pc_inc, i_pc_target);
 
         //Check
         if(pc_next == i_expected) begin
@@ -118,13 +118,13 @@ module tb_branch_unit;
         end
         else begin
             fail_count++;
-            $display("FAIL | pc_sel = %b | zero = %b | funct3 = %b | expected = %h | got = %h", i_pc_sel, i_zero, i_funct3, i_expected, pc_next)
+            $display("FAIL | pc_sel = %b | zero = %b | funct3 = %b | expected = %h | got = %h", i_pc_sel, i_zero, i_funct3, i_expected, pc_next);
         end
 
     endtask 
 
     //6. Initial Block
-        initial begin
+    initial begin
 
         // ── Branch mode (pc_sel=00) ──
         // BEQ (funct3=000): taken khi zero=1

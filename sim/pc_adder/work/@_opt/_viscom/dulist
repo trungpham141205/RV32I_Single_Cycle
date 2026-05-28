@@ -1,0 +1,2 @@
+1 8 pc_adder 4 fast 60 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/pc_adder/work 0 0 0 0 12 0
+1 11 tb_pc_adder 4 fast 60 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/pc_adder/work 0 0 0 0 73 0

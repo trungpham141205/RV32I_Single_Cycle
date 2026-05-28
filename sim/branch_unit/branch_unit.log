@@ -1,0 +1,54 @@
+# set MODULE branch_unit
+# branch_unit
+#  source scripts/run_unit.tcl
+# reading modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 13:49:01 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module branch_unit
+# 
+# Top level modules:
+# 	branch_unit
+# End time: 13:49:01 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 13:49:01 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/branch_unit/tb_branch_unit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module tb_branch_unit
+# 
+# Top level modules:
+# 	tb_branch_unit
+# End time: 13:49:01 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -t 1ps -voptargs="+acc" -wlf branch_unit.wlf -work work -do "add wave -recursive *; run -all; quit -f" work.tb_branch_unit 
+# Start time: 13:49:01 on May 28,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_branch_unit(fast)
+# Loading work.branch_unit(fast)
+# ** Error: Failure to checkout svverification license feature.
+# ** Error: (vsim-1) Unable to checkout verification license - required for testbench features (randomize, randcase, randsequence, covergroup).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_branch_unit File: /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/branch_unit/tb_branch_unit.sv
+# Error loading design
+# End time: 13:49:01 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1

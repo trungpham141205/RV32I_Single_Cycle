@@ -44,7 +44,7 @@ module tb_register_file;
         reg_write = 1'b0;
         
     endtask 
-
+	
     //5. Task: Read and Check
     task read_and_check(
         input logic [4:0]i_rs1,
@@ -52,48 +52,65 @@ module tb_register_file;
         input logic [4:0]i_rs2,
         input logic [31:0]i_expected_rs2
     );
-
         rs1 = i_rs1;
         rs2 = i_rs2;
         #10;
 
         if(rs1_data == i_expected_rs1 && rs2_data == i_expected_rs2) begin
             pass_count++;
-            $display("PASS | rs1[%0d] = %h | rs2[%0d] = %h", i_rs1, rs1_data, i_rs2, rs2_data);
+            $display("PASS | rs1[%0d] = %h | rs2[%0d] = %h",
+                     i_rs1, rs1_data, i_rs2, rs2_data);
         end
         else begin
             fail_count++;
-            $display("FAIL | rs1[%0d] expected = %h got = %h | rs2[%0d] expected = %h got = %h", i_rs1, i_expected_rs1, rs1_data, i_rs2, i_expected_rs2, rs2_data);
+            $display("FAIL | rs1[%0d] expected=%h got=%h | rs2[%0d] expected=%h got=%h",
+                     i_rs1, i_expected_rs1, rs1_data,
+                     i_rs2, i_expected_rs2, rs2_data);
         end
-
     endtask
 
-    //6. Task: Reset
-    task do_reset();
-        rst = 1'b1;
-        @(posedge clk);
-        #1;
-        rst = 1'b0;
-    endtask
-
-    //7. Initial Block
+    //6. Initial Block
     initial begin
-        pc_next = 32'h0;
-        do_reset();  // thay cho 3 dòng rst=1, @posedge, #1
+        // Khoi tao
+        reg_write  = 0;
+        rd         = 0;
+        write_data = 0;
+        rs1        = 0;
+        rs2        = 0;
+        @(posedge clk); #1;
 
-        // Test 1
-        check(32'h00000000);
+        // Test 1: x0 luon bang 0, khong the ghi
+        write_reg(5'd0, 32'hDEADBEEF);
+        read_and_check(5'd0, 32'h0, 5'd0, 32'h0);
 
-        // Test 2
-        next_pc(32'h00000004);
-        check(32'h00000004);
+        // Test 2: Ghi vao x1, doc lai
+        write_reg(5'd1, 32'hAABBCCDD);
+        read_and_check(5'd1, 32'hAABBCCDD, 5'd0, 32'h0);
 
-        // Test 3
-        next_pc(32'h00001000);
-        do_reset();  // thay cho rst=1, @posedge, #1
-        check(32'h00000000);
+        // Test 3: Ghi vao x2, doc ca x1 va x2 cung luc
+        write_reg(5'd2, 32'h12345678);
+        read_and_check(5'd1, 32'hAABBCCDD, 5'd2, 32'h12345678);
 
-        $display("Result: %0d PASSED, %0d FAILED", pass_count, fail_count);
+        // Test 4: Ghi de x1, kiem tra gia tri moi
+        write_reg(5'd1, 32'h11111111);
+        read_and_check(5'd1, 32'h11111111, 5'd2, 32'h12345678);
+
+        // Test 5: reg_write=0 -> khong ghi duoc
+        reg_write  = 1'b0;
+        rd         = 5'd3;
+        write_data = 32'hFFFFFFFF;
+        @(posedge clk); #1;
+        read_and_check(5'd3, 32'hx, 5'd0, 32'h0);
+
+        // Test 6: rs1 == rs2 (doc cung 1 reg tren 2 port)
+        write_reg(5'd5, 32'hCAFEBABE);
+        read_and_check(5'd5, 32'hCAFEBABE, 5'd5, 32'hCAFEBABE);
+
+        // Test 7: Ghi x31 (reg cuoi cung)
+        write_reg(5'd31, 32'hFEDCBA98);
+        read_and_check(5'd31, 32'hFEDCBA98, 5'd1, 32'h11111111);
+
+        $display("\nResult: %0d PASSED, %0d FAILED", pass_count, fail_count);
         $finish;
     end
 

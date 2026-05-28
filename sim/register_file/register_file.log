@@ -1,0 +1,63 @@
+# set MODULE register_file
+# register_file
+#  source scripts/run_unit.tcl
+# reading modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 14:17:41 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# End time: 14:17:41 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 14:17:41 on May 28,2026
+# vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/register_file/tb_register_file.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module tb_register_file
+# 
+# Top level modules:
+# 	tb_register_file
+# End time: 14:17:41 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -t 1ps -voptargs="+acc" -wlf register_file.wlf -work work -do "add wave -recursive *; run -all; quit -f" work.tb_register_file 
+# Start time: 14:17:41 on May 28,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_register_file(fast)
+# Loading work.register_file(fast)
+# add wave -recursive *
+#  run -all
+# PASS | rs1[0] = 00000000 | rs2[0] = 00000000
+# PASS | rs1[1] = aabbccdd | rs2[0] = 00000000
+# PASS | rs1[1] = aabbccdd | rs2[2] = 12345678
+# PASS | rs1[1] = 11111111 | rs2[2] = 12345678
+# FAIL | rs1[3] expected=xxxxxxxx got=xxxxxxxx | rs2[0] expected=00000000 got=00000000
+# PASS | rs1[5] = cafebabe | rs2[5] = cafebabe
+# PASS | rs1[31] = fedcba98 | rs2[1] = 11111111
+# 
+# Result: 6 PASSED, 1 FAILED
+# ** Note: $finish    : /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/register_file/tb_register_file.sv(114)
+#    Time: 146 ps  Iteration: 0  Instance: /tb_register_file
+# End time: 14:17:41 on May 28,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
