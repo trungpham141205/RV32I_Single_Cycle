@@ -6,9 +6,10 @@ module instruction_memory (
     logic [31:0]memory [0:31];
 
     initial begin
-     	$readmemh("program.hex", memory);
+        $readmemh("../../src/memory/program.hex", memory);
     end
 
+    
     always_comb begin
         instruction = memory[read_addr[7:2]];
     end

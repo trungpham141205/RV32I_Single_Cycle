@@ -1,4 +1,4 @@
-module risv_top (
+module risc_top (
     input logic clk,
     input logic rst,
     output logic [31:0]pc,

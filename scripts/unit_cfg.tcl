@@ -95,6 +95,17 @@ array set UNIT_CFG {
         }
         top tb_register_file
     }
+
+    risc_top {
+	src {
+	    src/core/risc_top.sv
+	}
+	tb {
+	   tb/risc_top/tb_risc_top.sv
+	}
+	top tb_risc_top	
+    }
+	
 }
 
 # Lay danh sach tat ca module

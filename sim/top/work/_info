@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/top
+vprogram_counter
+2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
+DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1779959387
+!i10b 1
+!s100 i<<XKO:a4A7]XGjlSB[k73
+IF>lg1lYX0h`7zc@48ka463
+S1
+R0
+w1779947915
+8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
+F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
+!i122 0
+L0 1 17
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1779959387.000000
+!s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
+!s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

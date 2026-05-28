@@ -1,4 +1,4 @@
-module tb_riscv_top;
+module tb_risc_top;
 
     // =========================================================
     // 0. Counters
@@ -23,7 +23,7 @@ module tb_riscv_top;
     // =========================================================
     // 2. DUT Instantiation
     // =========================================================
-    riscv_top dut (
+    risc_top dut (
         .clk           (clk),
         .rst           (rst),
         .pc            (pc),
