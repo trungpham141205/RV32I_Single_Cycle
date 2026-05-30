@@ -1,18 +1,13 @@
 module risc_top (
     input logic clk,
-    input logic rst,
-    output logic [31:0]pc,
-    output logic reg_write,
-    output logic [4:0]rd,
-    output logic [31:0]write_back,
-    output logic mem_write,
-    output logic [31:0]mem_addr,
-    output logic [31:0]mem_write_data,
-    output logic [31:0]pc_next
+    input logic rstn
 );
 
     //Signal Declaration
+    logic [31:0]pc;
+	 
     logic [31:0]pc_inc;
+    logic [31:0]pc_next;
 
     logic [31:0]pc_target;
 
@@ -21,16 +16,19 @@ module risc_top (
     logic funct7;
     logic [2:0]funct3;
     logic [6:0]opcode;
+    logic reg_write;
     logic [1:0]reg_back;
     logic [2:0]imm_sel;
     logic src_a_sel; 
     logic src_b_sel;
     logic [3:0]alu_control;
+    logic mem_write;
     logic mem_read;
     logic [1:0]pc_sel;
 
     logic [4:0]rs1;
     logic [4:0]rs2;
+    logic [4:0]rd;
     logic [31:0]rs1_data;
     logic [31:0]rs2_data;
 
@@ -43,7 +41,11 @@ module risc_top (
     logic [31:0]result;
     logic zero;
 
+    logic [31:0]mem_addr;
+    logic [31:0]mem_write_data;
     logic [31:0]mem_read_data;
+	 
+    logic [31:0]write_back;
 
     assign funct7 = instruction[30];
     assign funct3 = instruction[14:12];
@@ -57,7 +59,7 @@ module risc_top (
     //DUT Instantiation
     program_counter dut_pc(
         .clk(clk),
-        .rst(rst),
+        .rstn(rstn),
         .pc_next(pc_next),
         .pc(pc)
     );
@@ -161,4 +163,27 @@ module risc_top (
         .pc_target(pc_target),
         .pc_next(pc_next)
     );
+	 
+        (* keep = "true", preserve *) logic [31:0] pc_debug;
+	(* keep = "true", preserve *) logic [31:0] instr_debug;
+	(* keep = "true", preserve *) logic [31:0] wb_debug;
+	(* keep = "true", preserve *) logic [4:0]  rd_debug;
+	(* keep = "true", preserve *) logic        regwrite_debug;
+
+	always_ff @(posedge clk or negedge rstn) begin
+		 if(!rstn) begin
+			  pc_debug       <= 32'b0;
+			  instr_debug    <= 32'b0;
+			  wb_debug       <= 32'b0;
+			  rd_debug       <= 5'b0;
+			  regwrite_debug <= 1'b0;
+		 end
+		 else begin
+			  pc_debug       <= pc;
+			  instr_debug    <= instruction;
+			  wb_debug       <= write_back;
+			  rd_debug       <= rd;
+			  regwrite_debug <= reg_write;
+		 end
+	end
 endmodule

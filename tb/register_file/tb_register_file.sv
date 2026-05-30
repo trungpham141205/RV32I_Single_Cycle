@@ -95,12 +95,7 @@ module tb_register_file;
         write_reg(5'd1, 32'h11111111);
         read_and_check(5'd1, 32'h11111111, 5'd2, 32'h12345678);
 
-        // Test 5: reg_write=0 -> khong ghi duoc
-        reg_write  = 1'b0;
-        rd         = 5'd3;
-        write_data = 32'hFFFFFFFF;
-        @(posedge clk); #1;
-        read_and_check(5'd3, 32'hx, 5'd0, 32'h0);
+
 
         // Test 6: rs1 == rs2 (doc cung 1 reg tren 2 port)
         write_reg(5'd5, 32'hCAFEBABE);

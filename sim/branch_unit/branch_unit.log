@@ -3,28 +3,28 @@
 #  source scripts/run_unit.tcl
 # reading modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 14:29:48 on May 28,2026
+# Start time: 11:16:27 on May 30,2026
 # vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module branch_unit
 # 
 # Top level modules:
 # 	branch_unit
-# End time: 14:29:48 on May 28,2026, Elapsed time: 0:00:00
+# End time: 11:16:27 on May 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 14:29:48 on May 28,2026
+# Start time: 11:16:27 on May 30,2026
 # vlog -sv -work work "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core" "+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory" /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/branch_unit/tb_branch_unit.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module tb_branch_unit
 # 
 # Top level modules:
 # 	tb_branch_unit
-# End time: 14:29:48 on May 28,2026, Elapsed time: 0:00:00
+# End time: 11:16:27 on May 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -t 1ps -voptargs="+acc" -wlf branch_unit.wlf -work work -do "add wave -recursive *; run -all; quit -f" work.tb_branch_unit 
-# Start time: 14:29:48 on May 28,2026
+# Start time: 11:16:27 on May 30,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -67,5 +67,5 @@
 # Result: 15 PASSED, 0 FAILED
 # ** Note: $finish    : /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/branch_unit/tb_branch_unit.sv(170)
 #    Time: 150 ps  Iteration: 0  Instance: /tb_branch_unit
-# End time: 14:29:48 on May 28,2026, Elapsed time: 0:00:00
+# End time: 11:16:27 on May 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1

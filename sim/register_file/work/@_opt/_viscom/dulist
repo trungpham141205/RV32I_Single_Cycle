@@ -1,2 +1,2 @@
 1 13 register_file 4 fast 65 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/register_file/work 0 0 0 0 51 0
-1 16 tb_register_file 4 fast 65 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/register_file/work 0 0 0 0 224 0
+1 16 tb_register_file 4 fast 65 /home/trungpham/PROJECT/RV32I_Single_Cycle/sim/register_file/work 0 0 0 0 203 0

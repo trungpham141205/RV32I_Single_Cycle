@@ -14,10 +14,10 @@ Z1 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/risc_top
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1779960153
-VnR@hF6gha;KiBKVEWbO6k3
+Z2 !s110 1780114819
+Vi5ER`9Y;eWVgOf_3D<h1`1
 04 11 4 work tb_risc_top fast 0
-=1-14ac606edb59-6a180959-9c0ed-2300
+=1-14ac606edb59-6a1a6583-63c08-4b3e
 R0
 !s12f OEM100
 !s12b OEM100
@@ -30,189 +30,189 @@ OL;O;2025.2;82
 valu
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv
 Z4 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-R2
+Z5 !s110 1780114818
 !i10b 1
 !s100 ]i=z=?NR5EQnAoIo39RXX3
 IIP:n08d<?AmA6379iDRQ62
 S1
 R1
-Z5 w1779947915
+Z6 w1779947915
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv
 !i122 7
 L0 1 27
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OL;L;2025.2;82
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z8 !s108 1779960153.000000
+Z9 !s108 1780114818.000000
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv|
 !i113 0
-Z9 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 -sv -work work +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -sv -work work +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 valu_src_a_mux
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv
 R4
-R2
+R5
 !i10b 1
 !s100 dn^bgl_TjUW09MJKz]zEJ1
 ICB9QIHD3C]EL1_NG4m`fh3
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv
 !i122 5
-Z11 L0 1 10
-R6
+Z12 L0 1 10
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_a_mux.sv|
 !i113 0
-R9
 R10
+R11
 R3
 valu_src_b_mux
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_b_mux.sv
 R4
-R2
+R5
 !i10b 1
 !s100 _?[lI0E_Gz]FFefZ>Yla70
 Ii_J5jAPg?QB3R`5;ElGcS3
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_b_mux.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_b_mux.sv
 !i122 6
-R11
-R6
+R12
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_b_mux.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu_src_b_mux.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vbranch_unit
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv
 R4
-R2
+R5
 !i10b 1
 !s100 P@mh>=AS22lKS1bVS;@Xe1
 IDmHbhg3GQ<[UmZ]`597Le1
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv
 !i122 12
-Z12 L0 1 32
-R6
+Z13 L0 1 32
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vcontrol_unit
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv
 R4
-R2
+R5
 !i10b 1
 !s100 iS5ARDoDKV1gdGd7z78^B3
 IhlRiFWdT:k5Y229:Gf0zj1
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv
 !i122 2
 L0 1 101
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vdata_memory
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/data_memory.sv
 R4
-R2
+R5
 !i10b 1
 !s100 `gjoR28`K0]^jXE>_BEOb2
 I[XE33:>`FdaVACGS^9TRf3
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/data_memory.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/data_memory.sv
 !i122 8
 L0 1 102
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/data_memory.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/data_memory.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vimmediate_generator
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/immediate_generator.sv
 R4
-R2
+R5
 !i10b 1
 !s100 SiQEl?Q]Y@LXZkcRHfg8d3
 IX]AbeMn3@_m0^8[_eeW>@3
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/immediate_generator.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/immediate_generator.sv
 !i122 4
-R12
-R6
+R13
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/immediate_generator.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/immediate_generator.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vinstruction_memory
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/instruction_memory.sv
 R4
-R2
+R5
 !i10b 1
 !s100 kN__eIhBjdP<LQU:OD@NP2
 Ig_lPHe;Yh_RShVLC7`[Eh2
@@ -222,198 +222,198 @@ w1779960150
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/instruction_memory.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/instruction_memory.sv
 !i122 1
-Z13 L0 1 17
-R6
+Z14 L0 1 17
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/instruction_memory.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory/instruction_memory.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vpc_adder
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_adder.sv
 R4
-R2
+R5
 !i10b 1
 !s100 [9j1id@zH9S=c3n>=?D_12
 IDQd8GYHmj:z7n^ViN3DG`1
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_adder.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_adder.sv
 !i122 10
-R11
-R6
+R12
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_adder.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_adder.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vpc_imm
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_imm.sv
 R4
-R2
+R5
 !i10b 1
 !s100 QzklzSU6RMW:NVR8R[YTg2
 I5XaE5@CTAfJDfS4JJS[g^2
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_imm.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_imm.sv
 !i122 11
 L0 1 22
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_imm.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/pc_imm.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vprogram_counter
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
 R4
-R2
+R5
 !i10b 1
-!s100 i<<XKO:a4A7]XGjlSB[k73
-IF>lg1lYX0h`7zc@48ka463
+!s100 _3A>Yie6d?::0^55Zh[IM2
+IJ>_G1LGeO1U:b?H12on_D0
 S1
 R1
-R5
+w1780020393
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
 !i122 0
-R13
-R6
+R14
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vregister_file
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv
 R4
-R2
+R5
 !i10b 1
 !s100 58N9MnH:62@8AQ_e6`G463
 Ilb:VCdKI9S;R^an9YX5d]3
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv
 !i122 3
 L0 1 25
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/register_file.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vrisc_top
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/risc_top.sv
 R4
-R2
+R5
 !i10b 1
-!s100 YGJ:XV5Ok^3Xc;_odVL<J2
-ILAz:8j<o4;c2KIhkAZWna1
+!s100 9l2o0JQ7VgYI@NjY1:HO;0
+IJDNCnBPlWi1LTjL<lbokA0
 S1
 R1
-w1779957460
+w1780113954
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/risc_top.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/risc_top.sv
 !i122 13
-L0 1 164
-R6
+L0 1 189
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/risc_top.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/risc_top.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vtb_risc_top
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/tb/risc_top/tb_risc_top.sv
 R4
 R2
 !i10b 1
-!s100 B9c_VFPJSDBen_DSYlO_Z3
-IeZlnf4<1chJndjF?B8Pa@2
+!s100 GPSeYom_L?cIPEFJD6I]>3
+IHcziGKUl]@[zUXlcIacaL1
 S1
 R1
-w1779957229
+w1780114814
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/tb/risc_top/tb_risc_top.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/tb/risc_top/tb_risc_top.sv
 !i122 14
-L0 1 203
-R6
+L0 1 140
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/tb/risc_top/tb_risc_top.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/tb/risc_top/tb_risc_top.sv|
 !i113 0
-R9
 R10
+R11
 R3
 vwrite_back_mux
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/write_back_mux.sv
 R4
-R2
+R5
 !i10b 1
 !s100 BTklhh;<n3HdIP]Ca7b`30
 I]@2EaA7X`AEPSTfN`B:a=0
 S1
 R1
-R5
+R6
 8/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/write_back_mux.sv
 F/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/write_back_mux.sv
 !i122 9
 L0 1 20
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/write_back_mux.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/write_back_mux.sv|
 !i113 0
-R9
 R10
+R11
 R3
