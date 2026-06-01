@@ -1,4 +1,4 @@
-VSIM     = questa
+VSIM     = vsim
 SCRIPTS  = scripts
 SIM_DIR  = sim
 

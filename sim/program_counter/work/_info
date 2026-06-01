@@ -12,7 +12,7 @@ Z0 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/program_counter
 vprogram_counter
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv
 Z1 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z2 !s110 1780114590
+Z2 !s110 1780301694
 !i10b 1
 !s100 _3A>Yie6d?::0^55Zh[IM2
 IJ>_G1LGeO1U:b?H12on_D0
@@ -28,7 +28,7 @@ Z4 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z5 !s108 1780114590.000000
+Z5 !s108 1780301694.000000
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/program_counter.sv|
 !i113 0

@@ -4,15 +4,20 @@ module risc_top (
 );
 
     //Signal Declaration
+    //program counter
     logic [31:0]pc;
-	 
+    logic [31:0]pc_next; 
+    
+    //pc_adder
     logic [31:0]pc_inc;
-    logic [31:0]pc_next;
-
+   
+    //pc_imm
     logic [31:0]pc_target;
 
+    //instruction_memory
     logic [31:0]instruction;
 
+    //control_unit
     logic funct7;
     logic [2:0]funct3;
     logic [6:0]opcode;
@@ -22,29 +27,34 @@ module risc_top (
     logic src_a_sel; 
     logic src_b_sel;
     logic [3:0]alu_control;
-    logic mem_write;
     logic mem_read;
+    logic mem_write;
     logic [1:0]pc_sel;
 
+    //register_file
     logic [4:0]rs1;
     logic [4:0]rs2;
     logic [4:0]rd;
     logic [31:0]rs1_data;
     logic [31:0]rs2_data;
 
+    //immediate_generator
     logic [31:0]imm_ext;
 
+    //alu_src_a_mux
     logic [31:0]src_a;
 
+    //alu_src_b_mux
     logic [31:0]src_b;
 
+    //alu
     logic [31:0]result;
     logic zero;
 
-    logic [31:0]mem_addr;
-    logic [31:0]mem_write_data;
-    logic [31:0]mem_read_data;
+    //data_memory
+    logic [31:0]read_data;
 	 
+    //write_back
     logic [31:0]write_back;
 
     assign funct7 = instruction[30];
@@ -53,8 +63,6 @@ module risc_top (
     assign rs1 = instruction[19:15];
     assign rs2 = instruction[24:20];
     assign rd = instruction[11:7];
-    assign mem_addr = result;
-    assign mem_write_data = rs2_data;
 
     //DUT Instantiation
     program_counter dut_pc(
@@ -130,13 +138,13 @@ module risc_top (
         .funct3(funct3),
         .addr(result),
         .write_data(rs2_data),
-        .read_data(mem_read_data)
+        .read_data(read_data)
     );
 
     write_back_mux dut_write_back_mux(
         .reg_back(reg_back),
         .alu_result(result),
-        .data_memory(mem_read_data),
+        .data_memory(read_data),
         .pc_adder(pc_inc),
         .imm(imm_ext),
         .write_back(write_back)

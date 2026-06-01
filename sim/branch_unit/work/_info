@@ -14,23 +14,23 @@ Z1 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/branch_unit
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1780114587
-V57ZO;DY;af=M5i]U<ci1Y2
+!s110 1780301691
+VjF4]PNXK]>AE0@lPBmS`a2
 04 14 4 work tb_branch_unit fast 0
-=1-14ac606edb59-6a1a649b-78f75-47f1
+=1-14ac606edb59-6a1d3f7a-e9b5b-513d
 R0
 !s12f OEM100
 !s12b OEM100
 !s124 OEM10U2 
 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;2025.2;82
 vbranch_unit
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv
-Z4 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-R2
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1780301690
 !i10b 1
 !s100 P@mh>=AS22lKS1bVS;@Xe1
 IDmHbhg3GQ<[UmZ]`597Le1
@@ -46,17 +46,17 @@ Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1780114587.000000
+Z7 !s108 1780301690.000000
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/branch_unit.sv|
 !i113 0
 Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z9 !s92 -sv -work work +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core +incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+R2
 vtb_branch_unit
 2/home/trungpham/PROJECT/RV32I_Single_Cycle/tb/branch_unit/tb_branch_unit.sv
+R3
 R4
-R2
 !i10b 1
 !s100 Y5F;mdCPn`gAzAieXi7OQ0
 IAz@5Zi_zZ3[hKhC7PZmC83
@@ -78,4 +78,4 @@ R7
 !i113 0
 R8
 R9
-R3
+R2

@@ -14,10 +14,10 @@ Z1 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/control_unit
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1780114588
-VgJgbM48<d6@<2Ao?0__if3
+Z2 !s110 1780301691
+VzLAc8jLI;3@bBWO8bIX153
 04 15 4 work tb_control_unit fast 0
-=1-14ac606edb59-6a1a649c-71632-483b
+=1-14ac606edb59-6a1d3f7b-d9ee3-5187
 R0
 !s12f OEM100
 !s12b OEM100
@@ -46,7 +46,7 @@ Z7 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z8 !s108 1780114588.000000
+Z8 !s108 1780301691.000000
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/control_unit.sv|
 !i113 0

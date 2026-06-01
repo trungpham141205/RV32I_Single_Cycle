@@ -14,10 +14,10 @@ Z1 d/home/trungpham/PROJECT/RV32I_Single_Cycle/sim/alu
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1780114584
-VeU9_5RgE=]?B88@lAHgVJ3
+Z2 !s110 1780301688
+V^abZ>7n_>hZ=NWDM;EHel1
 04 6 4 work tb_alu fast 0
-=1-14ac606edb59-6a1a6498-aec11-4722
+=1-14ac606edb59-6a1d3f78-467a5-506e
 R0
 !s12f OEM100
 !s12b OEM100
@@ -46,7 +46,7 @@ Z7 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z8 !s108 1780114584.000000
+Z8 !s108 1780301688.000000
 !s107 /home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv|
 !s90 -sv|-work|work|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core|+incdir+/home/trungpham/PROJECT/RV32I_Single_Cycle/src/memory|/home/trungpham/PROJECT/RV32I_Single_Cycle/src/core/alu.sv|
 !i113 0
