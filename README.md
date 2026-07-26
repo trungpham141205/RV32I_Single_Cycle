@@ -1,19 +1,21 @@
 <div align="center">
-  <h1>🚀 RV32I Single-Cycle CPU</h1>
+  <h1>RV32I Single-Cycle CPU</h1>
   <p><strong>SystemVerilog processor core with modular verification and software-driven integration tests</strong></p>
   <p>
-    <img src="https://img.shields.io/badge/HDL-SystemVerilog-F97316?style=for-the-badge" alt="SystemVerilog" />
-    <img src="https://img.shields.io/badge/ISA-RISC--V%20RV32I-111827?style=for-the-badge&logo=riscv&logoColor=white" alt="RISC-V RV32I" />
-    <img src="https://img.shields.io/badge/Microarchitecture-Single%20Cycle-8B5CF6?style=for-the-badge" alt="Single-cycle microarchitecture" />
-    <img src="https://img.shields.io/badge/Committed%20Regression-10%20PASS%20%7C%200%20FAIL-22C55E?style=for-the-badge" alt="Committed regression: 10 pass, 0 fail" />
+    <img src="https://img.shields.io/badge/HDL-SystemVerilog-F97316?style=flat-square" alt="SystemVerilog" />
+    <img src="https://img.shields.io/badge/ISA-RISC--V%20RV32I-111827?style=flat-square&logo=riscv&logoColor=white" alt="RISC-V RV32I" />
+    <img src="https://img.shields.io/badge/Microarchitecture-Single%20Cycle-8B5CF6?style=flat-square" alt="Single-cycle microarchitecture" />
+    <img src="https://img.shields.io/badge/Committed%20Regression-10%20PASS%20%7C%200%20FAIL-22C55E?style=flat-square" alt="Committed regression: 10 pass, 0 fail" />
   </p>
 </div>
 
 ---
 
+## Overview
+
 A modular 32-bit RV32I educational core written in SystemVerilog. The repository includes unit-level self-checking testbenches, an integrated software-driven CPU test, reusable Questa/ModelSim scripts and Quartus project artifacts.
 
-## Current status
+## Project snapshot
 
 | Item | Status |
 |---|---|
